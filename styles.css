@@ -68,16 +68,17 @@ footer {
     margin-bottom: 20px;
 }
 
-.expenses-form, .income-form {
+.expenses-form, .income-form, .whatsapp-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Alterado para coluna em telas menores */
     gap: 10px;
     margin-bottom: 20px;
     align-items: center; /* Centraliza os itens horizontalmente */
 }
 
 .expenses-form input[type="text"], .expenses-form input[type="number"], 
-.income-form input[type="text"], .income-form input[type="number"] {
+.income-form input[type="text"], .income-form input[type="number"],
+.whatsapp-form input[type="text"] {
     width: 100%; /* Alterado para ocupar a largura total do container */
 }
 
@@ -87,7 +88,7 @@ footer {
 }
 
 /* Estilos para botões */
-button, input[type="submit"] {
+button, input[type="submit"], .whatsapp-btn {
     background: linear-gradient(45deg, #1e88e5, #673ab7);
     color: #fff;
     border: none;
@@ -96,9 +97,10 @@ button, input[type="submit"] {
     cursor: pointer;
     transition: background 0.3s, color 0.3s, transform 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Alterado para ocupar a largura total do container */
 }
 
-button:hover, input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover, .whatsapp-btn:hover {
     background: linear-gradient(45deg, #673ab7, #1e88e5);
     transform: scale(1.05);
 }
@@ -162,10 +164,6 @@ header:hover {
         max-width: 90%; /* Reduz a largura máxima para melhor ajuste em telas menores */
         margin: 30px auto; /* Ajusta a margem para um espaçamento adequado */
         padding: 10px; /* Reduz o preenchimento para economizar espaço */
-    }
-
-    .calculator, .budget, .whatsapp {
-        padding: 15px; /* Reduz o preenchimento dos elementos para melhorar o espaçamento */
     }
 
     header h1 {

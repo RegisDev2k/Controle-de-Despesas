@@ -1,0 +1,150 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e0e0e;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilos para a calculadora de gastos */
+.calculator, .budget, .whatsapp {
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.calculator:hover, .budget:hover, .whatsapp:hover {
+    transform: translateY(-5px);
+}
+
+.calculator h2, .budget h2, .whatsapp h2 {
+    margin-bottom: 20px;
+}
+
+.expenses-form, .income-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.expenses-total, .budget-analysis {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para botões */
+button, input[type="submit"] {
+    background: linear-gradient(45deg, #1e88e5, #673ab7);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(45deg, #673ab7, #1e88e5);
+    transform: scale(1.05);
+}
+
+/* Estilos para listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+
+}
+
+/* Estilos para elementos de entrada */
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    border: 1px solid #8a8a8a;
+    border-radius: 5px;
+    background-color: #303030;
+    color: #fff;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #ff4081;
+}
+
+/* Estilos para o botão de remover */
+.remove-btn {
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.remove-btn:hover {
+    color: #ff4081;
+}
+
+/* Estilos para o cabeçalho */
+header:hover {
+    transform: scale(1.05);
+}
